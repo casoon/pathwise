@@ -1,0 +1,9 @@
+[package]
+name = "pathwise"
+version = "0.1.0"
+edition = "2024"
+description = "Generic search, optimization, and constraint-solving building blocks for Rust"
+license = "MIT"
+repository = "https://github.com/casoon/pathwise"
+
+[dependencies]
