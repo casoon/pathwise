@@ -6,4 +6,24 @@ description = "Generic search, optimization, and constraint-solving building blo
 license = "MIT"
 repository = "https://github.com/casoon/pathwise"
 
+[features]
+default = []
+petgraph = ["dep:petgraph"]
+
 [dependencies]
+petgraph = { version = "0.7", optional = true }
+
+
+[dev-dependencies]
+criterion = "0.5"
+proptest = "1.5"
+
+[[bench]]
+name = "search_benches"
+harness = false
+
+[[bench]]
+name = "constraint_benches"
+harness = false
+
+
