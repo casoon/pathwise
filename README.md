@@ -6,8 +6,11 @@ API, not an algorithms encyclopedia.
 
 ## Status
 
-Concept phase. No implementation yet — see `plan/01-concept.md` (local,
-untracked) for scope and design rationale.
+Version 0.1 implements the generic search, optimization, constraint, and
+graph building blocks described below. The former duplicate CSP solver and
+scheduling domain modules were removed in favor of the actively used
+`unifier` → `schedulr` layers; the generic cancellation and shared-incumbent
+primitives used by `unifier` remain here.
 
 ## Scope
 

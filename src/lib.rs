@@ -1,4 +1,4 @@
-//! `pathwise` — generic search, optimization, constraint-solving, and scheduling building blocks for Rust.
+//! `pathwise` — generic search, optimization, and constraint-building blocks for Rust.
 //!
 //! Concept and scope: see `README.md`. Implementation plan: `plan/`.
 //!
@@ -8,21 +8,15 @@
 //! core
 //!  ├── search
 //!  ├── optimization
-//!  ├── constraint
-//!  └── solver
+//!  └── constraint
 //! graph
-//! scheduling
 //! ```
 
 pub mod constraint;
 pub mod core;
 pub mod graph;
 pub mod optimization;
-pub mod scheduling;
 pub mod search;
-pub mod solver;
 
 pub use core::problem::{OptimizationProblem, Problem, SearchProblem};
 pub use core::solution::{SearchMetrics, Solution};
-pub use scheduling::{Activity, Interval, Lesson, ScheduleAssignment, TimetableProblem};
-pub use solver::{ConstraintSolver, Domain, VariableId};

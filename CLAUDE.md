@@ -31,11 +31,10 @@ constraint (backtracking, forward_checking, propagation, AC-3, MRV, LCV)
 graph (topological_sort; matching/flow/coloring später)
 ```
 
-Langfristige Stoßrichtung (nicht Teil von 0.1, nur Kontext): `pathwise`
-ist die unterste Schicht eines geplanten Stapels
-`pathwise → constraint solver → scheduling framework → Stundenplanung`.
-Nicht vorauseilend implementieren — jede Schicht ist ein eigenständig
-nutzbares Zwischenprodukt.
+Langfristige Stoßrichtung: `pathwise` bleibt die unterste, generische
+Schicht des Stapels `pathwise → unifier → schedulr → Anwendungen`.
+CSP-spezifische Solver und Scheduling-Domänenmodelle gehören in die
+darüberliegenden Crates; siehe `plan/DECISIONS.md`.
 
 ## Arbeitsweise
 
