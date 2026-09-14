@@ -1,6 +1,6 @@
 [package]
 name = "pathwise"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 description = "Generic search, optimization, and constraint-solving building blocks for Rust"
 license = "MIT"
@@ -25,5 +25,4 @@ harness = false
 [[bench]]
 name = "constraint_benches"
 harness = false
-
 
