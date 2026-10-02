@@ -3,6 +3,7 @@
 pub mod cancellation;
 pub mod incumbent;
 pub mod problem;
+pub(crate) mod rng;
 pub mod solution;
 pub mod strategy;
 pub mod termination;
