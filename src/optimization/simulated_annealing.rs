@@ -1,6 +1,7 @@
 //! Simulated Annealing Optimization.
 
 use crate::core::problem::OptimizationProblem;
+use crate::core::rng::LcgRng;
 use crate::core::solution::{SearchMetrics, Solution};
 
 /// Options for Simulated Annealing schedule.
@@ -24,26 +25,6 @@ impl Default for SimulatedAnnealingOptions {
             min_temperature: 0.001,
             max_iterations: 10_000,
         }
-    }
-}
-
-/// Simple deterministic linear congruential PRNG for reproducible annealing choices.
-struct LcgRng {
-    state: u64,
-}
-
-impl LcgRng {
-    fn new(seed: u64) -> Self {
-        Self { state: seed }
-    }
-
-    fn next_f64(&mut self) -> f64 {
-        self.state = self
-            .state
-            .wrapping_mul(6364136223846793005)
-            .wrapping_add(1442695040888963407);
-        let val = (self.state >> 11) as f64;
-        val / (1u64 << 53) as f64
     }
 }
 

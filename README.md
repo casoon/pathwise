@@ -20,7 +20,9 @@ a problem's state space:
 - **search** — BFS, DFS, iterative deepening, uniform cost search,
   best-first search, A*, beam search
 - **optimization** — branch and bound, hill climbing, local search,
-  simulated annealing
+  simulated annealing, and budgeted local search for problems whose
+  evaluation is expensive, asynchronous and noisy (`AsyncOptimizationProblem`,
+  e.g. tuning a language-model program against a dataset)
 - **constraint** — backtracking, forward checking, constraint propagation
   (AC-3), variable/value ordering heuristics
 - **graph** — topological sort, with matching/flow/coloring evaluated
